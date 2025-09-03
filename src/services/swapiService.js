@@ -1,6 +1,6 @@
 class SwapiService {
     constructor() {
-        this.baseURL = 'https://swapi.dev/api'; // Correção da URL base
+        this.baseURL = 'https://swapi.info/api';
         this.axios = require('axios');
     }
 
