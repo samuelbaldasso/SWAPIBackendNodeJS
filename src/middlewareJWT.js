@@ -1,7 +1,7 @@
 // Middleware JWT para proteger rotas
 const jwt = require("jsonwebtoken");
 
-const SECRET = process.env.JWT_SECRET || "segredo_super_secreto";
+const SECRET = process.env.JWT_SECRET || "secret";
 
 function authenticateJWT(req, res, next) {
   const authHeader = req.headers.authorization;
