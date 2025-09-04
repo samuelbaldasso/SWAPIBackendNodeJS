@@ -2,12 +2,12 @@ const express = require("express");
 const SwapiController = require("../controllers/swapiController");
 
 const router = express.Router();
-const swapiService = require("../services/swapiService");
+const swapiService = require("../services/swapiService").default;
 const swapiController = new SwapiController(swapiService);
 
 /**
  * @swagger
- * /swapi/people:
+ * /people:
  *   get:
  *     summary: Retorna uma lista de pessoas do universo Star Wars
  *     tags: [SWAPI]
@@ -23,7 +23,7 @@ router.get("/people", swapiController.getPeople.bind(swapiController));
 
 /**
  * @swagger
- * /swapi/planets:
+ * /planets:
  *   get:
  *     summary: Retorna uma lista de planetas do universo Star Wars
  *     tags: [SWAPI]

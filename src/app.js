@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Endpoint de login para gerar token JWT
 app.post("/api/login", (req, res) => {
   const { username, password } = req.body;
-  // Exemplo simples: qualquer usuário/senha gera um token
+
   if (username && password) {
     const user = { username };
     const token = jwt.sign(user, SECRET, { expiresIn: "1h" });

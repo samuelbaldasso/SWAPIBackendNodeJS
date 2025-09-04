@@ -22,8 +22,6 @@ class SwapiController {
       res.status(500).json({ message: "Error fetching planets", error });
     }
   }
-
-  // Additional methods for other SWAPI endpoints can be added here
 }
 
 module.exports = SwapiController;
